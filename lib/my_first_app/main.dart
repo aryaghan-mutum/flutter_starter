@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
       // body: getContainer(),
       // body: buildPadding(),
       // body: buildRows(),
-      body: buildRows2(),
+      body: buildRowsWithImage(),
       // body: buildColumns(),
       floatingActionButton: floatingAction(),
     );

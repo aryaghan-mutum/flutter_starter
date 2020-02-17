@@ -19,9 +19,10 @@ Widget buildRows() {
   );
 }
 
-Widget buildRows2() {
+Widget buildRowsWithImage() {
   return Row(
     children: <Widget>[
+      Expanded(flex: 3, child: Image.asset('assets/images/sun.jpeg')),
       getContainer(EdgeInsets.all(30.0), Colors.orange, 'a'),
       getContainer(EdgeInsets.all(30.0), Colors.green, 'b'),
       getContainer(EdgeInsets.all(30.0), Colors.deepPurple, 'c'),
