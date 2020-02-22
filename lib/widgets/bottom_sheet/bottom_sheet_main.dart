@@ -4,7 +4,7 @@ import 'bottom_sheet.dart';
 void main() => runApp(BottomSheetApp());
 
 class BottomSheetApp extends StatelessWidget {
-  final String _title = 'Dialog Box App';
+  final String _title = 'Bottom Sheet App';
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.amber,
       appBar: AppBar(
           centerTitle: true,
-          title: Text('Bottom Sheet App'),
+          title: Text(widget.title),
           backgroundColor: Colors.blueGrey),
       body: Center(
         child: Column(
@@ -57,8 +57,6 @@ class _HomePageState extends State<HomePage> {
         foregroundColor: Colors.amber,
         onPressed: () => bottomModal.bottomSheet(context),
       ),
-
-
     );
   }
 }

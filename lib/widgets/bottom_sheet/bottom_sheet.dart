@@ -8,9 +8,9 @@ class BottomModal {
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              _createTitle(context, 'Message', Icons.message, _action1),
               _createTitle(context, 'Take Photo', Icons.camera_alt, _action2),
-              _createTitle(context, 'My images', Icons.photo_library, _action3),
+              _createTitle(context, 'Images', Icons.photo_library, _action3),
+              _createTitle(context, 'Message', Icons.message, _action1),
             ],
           );
         });
