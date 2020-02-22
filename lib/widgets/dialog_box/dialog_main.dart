@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/widgets/dialog_box/HomePage.dart';
+import 'package:flutter_starter/widgets/dialog_box/home_page.dart';
 
 void main() => runApp(DialogApp());
 

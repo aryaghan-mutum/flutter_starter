@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/widgets/bottom_sheet/HomePage.dart';
+import 'package:flutter_starter/widgets/bottom_sheet/home_page.dart';
 
 void main() => runApp(BottomSheetApp());
 

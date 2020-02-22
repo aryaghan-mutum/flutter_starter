@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/widgets/text_form_field/home_page.dart';
+import 'package:flutter_starter/widgets/random_image_when_clicked/home_page.dart';
 
-void main() => runApp(TextFormFieldApp());
+void main() => runApp(RandomImg());
 
-class TextFormFieldApp extends StatelessWidget {
-  final String _title = 'Text Form App';
+class RandomImg extends StatelessWidget {
+
+  final String _title = 'Random Images App';
 
   @override
   Widget build(BuildContext context) {
@@ -15,3 +16,4 @@ class TextFormFieldApp extends StatelessWidget {
     );
   }
 }
+

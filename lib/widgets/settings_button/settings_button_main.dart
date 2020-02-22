@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/widgets/settings_button/HomePage.dart';
+import 'package:flutter_starter/widgets/settings_button/home_page.dart';
 
 void main() => runApp(SettingsButtonApp());
 
