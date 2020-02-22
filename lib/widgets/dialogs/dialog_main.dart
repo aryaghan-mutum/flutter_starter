@@ -4,9 +4,15 @@ import 'dialogs.dart';
 void main() => runApp(DialogApp());
 
 class DialogApp extends StatelessWidget {
+  final String _title = 'Dialog Box App';
+
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: _title,
+      home: HomePage(title: _title),
+    );
   }
 }
 
@@ -20,22 +26,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Dialogs dialogs = new Dialogs();
+  Dialogs dialogs = Dialogs();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.purpleAccent,
         title: Text(widget.title),
+        centerTitle: true,
       ),
+      backgroundColor: Colors.black87,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                onPressed: () => dialogs.information(context, 'My Title', 'My Description'),
+                color: Colors.yellowAccent,
+                onPressed: () => dialogs.information(context, 'Informatin Dialog Title', 'This is Infromation Dialog box'),
                 child: Text('Informarion dialog'),
               )
             ],
@@ -44,8 +54,9 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
+                color: Colors.greenAccent,
                 onPressed: () async {
-                  dialogs.waiting(context, 'My Title 2', 'My Description 2');
+                  dialogs.waiting(context, 'Waiting Dialog Title', 'This is Waiting Dialog box');
                   await Future.delayed(Duration(seconds: 2));
                   Navigator.pop(context);
                 },
@@ -57,7 +68,8 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                onPressed: () => dialogs.confirm(context, 'My Title 3', 'My Description 3'),
+                color: Colors.lightBlue,
+                onPressed: () => dialogs.confirm(context, 'Confirm Dialog Title', 'This is Conform Dialog box'),
                 child: Text('Confirm dialog'),
               )
             ],
