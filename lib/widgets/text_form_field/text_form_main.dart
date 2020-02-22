@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/widgets/settings_button/HomePage.dart';
+import 'package:flutter_starter/widgets/text_form_field/HomePage.dart';
 
-void main() => runApp(SettingsButtonApp());
+void main() => runApp(TextFormFieldApp());
 
-class SettingsButtonApp extends StatelessWidget {
-  final String _title = 'Settings Button App';
+class TextFormFieldApp extends StatelessWidget {
+  final String _title = 'Text Form App';
 
   @override
   Widget build(BuildContext context) {

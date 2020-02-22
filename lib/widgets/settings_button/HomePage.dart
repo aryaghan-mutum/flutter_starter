@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: buildBody(),
+      body: buildAppBody(),
     );
   }
 
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  Center buildBody() {
+  Center buildAppBody() {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

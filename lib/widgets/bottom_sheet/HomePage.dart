@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.amber,
       appBar: buildAppBar(),
-      body: buildBody(),
+      body: buildAppBody(),
       floatingActionButton: buildFloatingActionBtn(),
     );
   }
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blueGrey);
   }
 
-  Center buildBody() {
+  Center buildAppBody() {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

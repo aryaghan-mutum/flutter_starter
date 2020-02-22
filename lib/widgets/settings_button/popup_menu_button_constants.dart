@@ -5,7 +5,7 @@ class Constants {
   static const String settings = "Settings";
   static const String signout = 'Sign out';
 
-  static const List<String> choices = <String>[
+  static const List<String> choices = [
     subscribe,
     settings,
     signout,
