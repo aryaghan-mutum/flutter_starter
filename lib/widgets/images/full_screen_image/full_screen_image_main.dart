@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/widgets/full_screen_image/home_page.dart';
+import 'package:flutter_starter/widgets/images/full_screen_image/home_page.dart';
 
 void main() => runApp(YogaSutraApp());
 

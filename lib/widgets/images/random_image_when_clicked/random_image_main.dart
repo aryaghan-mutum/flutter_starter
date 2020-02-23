@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/widgets/random_image_when_clicked/home_page.dart';
+import 'package:flutter_starter/widgets/images/random_image_when_clicked/home_page.dart';
 
 void main() => runApp(RandomImg());
 
