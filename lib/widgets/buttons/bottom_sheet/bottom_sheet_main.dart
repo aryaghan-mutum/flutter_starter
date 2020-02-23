@@ -10,7 +10,6 @@ class BottomSheetApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: _title,
       home: HomePage(title: _title),
     );
   }

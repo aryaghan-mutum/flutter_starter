@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'bottom_sheet.dart';
+import 'floating_action_button.dart';
+import 'app_body.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -11,15 +12,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  BottomModal bottomModal = BottomModal();
+  AppBody appBody = AppBody();
+  FloatingAction bottomSheet = FloatingAction();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amber,
       appBar: buildAppBar(),
-      body: buildAppBody(),
-      floatingActionButton: buildFloatingActionBtn(),
+      body: appBody.buildAppBody(),
+      floatingActionButton: bottomSheet.buildFloatingActionBtn(context),
     );
   }
 
@@ -28,31 +30,5 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         title: Text(widget.title),
         backgroundColor: Colors.blueGrey);
-  }
-
-  Center buildAppBody() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'Welcome!',
-            style: TextStyle(
-              color: Colors.lightBlue,
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  FloatingActionButton buildFloatingActionBtn() {
-    return FloatingActionButton(
-      child: Icon(Icons.add),
-      foregroundColor: Colors.amber,
-      onPressed: () => bottomModal.bottomSheet(context),
-    );
   }
 }

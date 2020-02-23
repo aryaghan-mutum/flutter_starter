@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'popup_menu_button_constants.dart';
+import 'app_body.dart';
+import 'popup_button_menu.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -11,11 +12,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  AppBody appBody = AppBody();
+  PopupButtonMenu popupMenuButton = PopupButtonMenu();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: buildAppBody(),
+      body: appBody.buildAppBody(),
     );
   }
 
@@ -24,51 +28,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.pinkAccent,
       title: Text(widget.title),
       centerTitle: true,
-      actions: <Widget>[buildPopupMenuBtn()],
-    );
-  }
-
-  PopupMenuButton buildPopupMenuBtn() {
-    return PopupMenuButton<String>(
-      onSelected: choiceAction,
-      itemBuilder: (BuildContext context) {
-        return Constants.choices.map((String choice) {
-          return PopupMenuItem<String>(
-            value: choice,
-            child: Text(choice),
-          );
-        }).toList();
-      },
-    );
-  }
-
-  void choiceAction(String choice) {
-    if (choice == Constants.settings) {
-      print('Seetings');
-    }
-    if (choice == Constants.subscribe) {
-      print('Subscribe');
-    }
-    if (choice == Constants.signout) {
-      print('Signout');
-    }
-  }
-
-  Center buildAppBody() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'Welcome!',
-            style: TextStyle(
-              color: Colors.pinkAccent,
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ],
-      ),
+      actions: <Widget>[popupMenuButton.buildPopupMenuBtn()],
     );
   }
 }

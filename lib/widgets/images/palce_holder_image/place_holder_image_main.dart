@@ -23,10 +23,13 @@ class PlaceHolderApp extends StatelessWidget {
   }
 
   Center buildAppBody() {
+    var placeHolderImage = 'assets/images/cat.jpeg';
+    var networkImage = 'https://picsum.photos/250?image=9';
+
     return Center(
       child: FadeInImage.assetNetwork(
-        placeholder: 'assets/images/cat.jpeg',
-        image: 'https://picsum.photos/250?image=9',
+        placeholder: placeHolderImage,
+        image: networkImage,
       ),
     );
   }

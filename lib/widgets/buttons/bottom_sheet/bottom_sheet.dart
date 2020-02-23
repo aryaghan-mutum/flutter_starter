@@ -8,9 +8,9 @@ class BottomModal {
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              _createTitle(context, 'Take Photo', Icons.camera_alt, _action2),
-              _createTitle(context, 'Images', Icons.photo_library, _action3),
-              _createTitle(context, 'Message', Icons.message, _action1),
+              _createTitle(context, 'Take Photo', Icons.camera_alt, _operation2),
+              _createTitle(context, 'Images', Icons.photo_library, _operation3),
+              _createTitle(context, 'Message', Icons.message, _operation1),
             ],
           );
         });
@@ -35,15 +35,7 @@ class BottomModal {
     );
   }
 
-  _action1() {
-    print('action 1');
-  }
-
-  _action2() {
-    print('action 2');
-  }
-
-  _action3() {
-    print('action 3');
-  }
+  _operation1() => print('action 1');
+  _operation2() => print('action 2');
+  _operation3() => print('action 3');
 }

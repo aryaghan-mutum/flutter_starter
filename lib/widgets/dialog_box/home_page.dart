@@ -1,3 +1,5 @@
+import 'package:flutter_starter/widgets/dialog_box/dialog_boxes.dart';
+
 import 'dialogs.dart';
 import 'package:flutter/material.dart';
 
@@ -31,58 +33,14 @@ class _HomePageState extends State<HomePage> {
   }
 
   Column buildAppBody() {
+    BuildDialogBoxes buildDialogBoxes = BuildDialogBoxes();
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        buildInformationDialog(),
-        buildWaitingDialog(),
-        buildConfirmDialog(),
-      ],
-    );
-  }
-
-  Row buildInformationDialog() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        RaisedButton(
-          color: Colors.yellowAccent,
-          onPressed: () => dialogs.information(context,
-              'Informatin Dialog Title', 'This is Infromation Dialog box'),
-          child: Text('Informarion dialog'),
-        )
-      ],
-    );
-  }
-
-  Row buildWaitingDialog() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        RaisedButton(
-          color: Colors.greenAccent,
-          onPressed: () async {
-            dialogs.waiting(
-                context, 'Waiting Dialog Title', 'This is Waiting Dialog box');
-            await Future.delayed(Duration(seconds: 2));
-            Navigator.pop(context);
-          },
-          child: Text('Waiting dialog'),
-        )
-      ],
-    );
-  }
-
-  Row buildConfirmDialog() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        RaisedButton(
-          color: Colors.lightBlue,
-          onPressed: () => dialogs.confirm(
-              context, 'Confirm Dialog Title', 'This is Conform Dialog box'),
-          child: Text('Confirm dialog'),
-        )
+        buildDialogBoxes.buildInformationDialog(context),
+        buildDialogBoxes.buildWaitingDialog(context),
+        buildDialogBoxes.buildConfirmDialog(context),
       ],
     );
   }
