@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/widgets/images/random_image_when_clicked/home_page.dart';
 
-void main() => runApp(RandomImg());
+void main() => runApp(RandomImageWhenClickedApp());
 
-class RandomImg extends StatelessWidget {
+class RandomImageWhenClickedApp extends StatelessWidget {
 
-  final String _title = 'Random Images App';
+  final String _title = 'Random Image When Clicked App';
 
   @override
   Widget build(BuildContext context) {

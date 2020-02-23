@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-appBody() => Padding(
+appBody() {
+  return Padding(
       padding: EdgeInsets.fromLTRB(30.0, 5.0, 30.0, 0.0),
       child: Column(
         children: <Widget>[
@@ -29,6 +30,7 @@ appBody() => Padding(
         ],
       ),
     );
+}
 
 padaButtons(String buttonName) => FloatingActionButton.extended(
       backgroundColor: Colors.black12,
