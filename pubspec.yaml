@@ -16,6 +16,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  splashscreen: ^1.2.0
+
 
 flutter:
 

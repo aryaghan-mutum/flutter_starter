@@ -4,7 +4,6 @@ import 'app_body.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
-
   const HomePage({Key key, this.title}) : super(key: key);
 
   @override
@@ -32,3 +31,4 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blueGrey);
   }
 }
+

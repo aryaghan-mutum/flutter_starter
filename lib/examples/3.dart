@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/ys/main.dart';
 //
 //void main() {
 //  runApp(

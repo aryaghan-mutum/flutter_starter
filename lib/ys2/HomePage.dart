@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'contact_page.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -87,7 +86,6 @@ class _HomePageState extends State<HomePage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      ContactPage();
     });
   }
 }

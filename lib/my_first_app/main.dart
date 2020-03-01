@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'app_bar.dart';
-import 'app_body.dart';
 import 'floating_action.dart';
 import 'rows.dart';
-import 'columns.dart';
-import 'padding.dart';
-import 'container.dart';
 
 void main() => runApp(MaterialApp(
       home: Home(),
